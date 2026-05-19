@@ -1,7 +1,8 @@
 function App() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-950 text-white">
 
+      {/* Navbar */}
       <nav className="flex justify-between items-center px-10 py-6 border-b border-gray-800">
         <h2 className="text-2xl font-bold">Cecilia Ramirez</h2>
 
@@ -13,9 +14,15 @@ function App() {
         </div>
       </nav>
 
+      {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-6">
 
-<img src="/profile.jpg" alt="Cecilia Ramirez" className="w-44 h-44 rounded-full object-cover mb-6" />
+        <img
+          src="/profile.jpg"
+          alt="Cecilia Ramirez"
+          className="w-52 h-52 rounded-full object-cover mb-8 border-4 border-white shadow-2xl"
+        />
+
         <h1 className="text-6xl font-bold mb-4">
           Cecilia Ramirez
         </h1>
@@ -27,96 +34,140 @@ function App() {
         <div className="mt-8 flex gap-4">
           <a
             href="#projects"
-            className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-300"
+            className="bg-white text-black px-6 py-3 rounded-xl font-semibold hover:bg-gray-300 transition"
           >
             View Projects
           </a>
 
           <a
-            href="#contact"
-            className="border border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black"
+            href="mailto:ramirez.ceci@outlook.com"
+            className="border border-white px-6 py-3 rounded-xl hover:bg-white hover:text-black transition"
           >
             Contact Me
           </a>
         </div>
       </section>
 
+{/* Resume Section */}
+<section className="px-10 py-20 text-center">
+  <h2 className="text-4xl font-bold mb-8">Resume</h2>
+
+  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-10 shadow-xl max-w-3xl mx-auto">
+
+    <p className="text-gray-200 text-lg mb-8">
+      View or download my professional resume.
+    </p>
+
+    <div className="flex justify-center gap-4 flex-wrap">
+
+      <a
+ href="/CeciliaRamirez_Resume.pdf"
+  target="_blank"
+  className="bg-white text-black px-8 py-3 rounded-xl font-semibold hover:bg-gray-300 transition"
+>
+  View Resume
+</a>
+
+      <a
+  href="/CeciliaRamirez_Resume.pdf"
+  download
+  className="border border-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition"
+>
+  Download Resume
+</a>
+
+    </div>
+
+  </div>
+</section>
+
+      {/* About */}
       <section id="about" className="px-10 py-20 max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold mb-6">About Me</h2>
 
-        <p className="text-gray-300 text-lg leading-8">
-          I am a Computer Science student at the University of Texas at Tyler,
-          interested in data analytics, software development, and building
-          real-world projects that solve problems.
-        </p>
+        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg">
+          <p className="text-gray-200 text-lg leading-8">
+            I am a Computer Science student at the University of Texas at Tyler,
+            passionate about software development, data analytics, and building
+            real-world applications. I enjoy creating projects that combine
+            technology, design, and problem-solving.
+          </p>
+        </div>
       </section>
 
-      <section id="projects" className="px-10 py-20 max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-8">Projects</h2>
+      {/* Projects */}
+      <section id="projects" className="px-10 py-20 max-w-6xl mx-auto">
+        <h2 className="text-4xl font-bold mb-10 text-center">Projects</h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
 
-          <div className="border border-gray-700 rounded-2xl p-6 hover:border-white transition">
-            <h3 className="text-2xl font-bold">Housing Price EDA</h3>
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:scale-105 transition">
+            <h3 className="text-2xl font-bold mb-4">
+              Housing Price EDA
+            </h3>
 
-            <p className="text-gray-300 mt-3">
-              Analyzed housing data using Python, Pandas, and Tableau.
+            <p className="text-gray-300 mb-6">
+              Exploratory Data Analysis project using Python, Pandas,
+              Matplotlib, and Tableau to analyze housing price trends.
             </p>
 
-            <div className="mt-5">
-              <a
-                href="https://github.com/itsceciliaramirez/housing-price-eda"
-                target="_blank"
-                className="bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-300"
-              >
-                GitHub
-              </a>
-            </div>
+            <a
+              href="https://github.com/itsceciliaramirez/housing-price-eda"
+              target="_blank"
+              className="bg-white text-black px-5 py-2 rounded-lg font-semibold hover:bg-gray-300"
+            >
+              View GitHub
+            </a>
           </div>
 
-          <div className="border border-gray-700 rounded-2xl p-6 hover:border-white transition">
-            <h3 className="text-2xl font-bold">
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 shadow-lg hover:scale-105 transition">
+            <h3 className="text-2xl font-bold mb-4">
               Healthcare Analytics Platform
             </h3>
 
-            <p className="text-gray-300 mt-3">
-              Full-stack healthcare analytics project built with React,
+            <p className="text-gray-300 mb-6">
+              Full-stack healthcare analytics platform built with React,
               Node.js, Express, PostgreSQL, SQL, and Tailwind CSS.
             </p>
 
-            <div className="mt-5">
-              <a
-                href="https://github.com/"
-                target="_blank"
-                className="bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-300"
-              >
-                GitHub
-              </a>
-            </div>
+            <a
+              href="https://github.com/"
+              target="_blank"
+              className="bg-white text-black px-5 py-2 rounded-lg font-semibold hover:bg-gray-300"
+            >
+              View GitHub
+            </a>
           </div>
 
         </div>
       </section>
 
-      <section id="skills" className="px-10 py-20 max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-6">Skills</h2>
+      {/* Skills */}
+      <section id="skills" className="px-10 py-20 max-w-5xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-10">Skills</h2>
 
-        <div className="flex flex-wrap gap-3">
+        <div className="flex flex-wrap justify-center gap-4">
           {[
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Tailwind CSS",
+            "Node.js",
+            "Express.js",
             "Python",
-            "SQL",
             "Java",
             "C++",
-            "React",
-            "Node.js",
+            "SQL",
             "PostgreSQL",
             "Tableau",
             "Git",
-            "Tailwind CSS",
+            "GitHub",
+            "VS Code",
           ].map((skill) => (
             <span
               key={skill}
-              className="border border-gray-700 px-4 py-2 rounded-full text-gray-300"
+              className="bg-white text-black px-5 py-3 rounded-xl font-semibold shadow-md hover:scale-105 transition"
             >
               {skill}
             </span>
@@ -124,29 +175,42 @@ function App() {
         </div>
       </section>
 
-      <section id="contact" className="px-10 py-20 max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold mb-6">Contact</h2>
+      {/* Contact */}
+      <section id="contact" className="px-10 py-20 max-w-5xl mx-auto text-center">
+        <h2 className="text-4xl font-bold mb-10">Contact</h2>
 
-        <p className="text-gray-300 text-lg mb-4">
-          Email: ramirez.ceci@outlook.com
-        </p>
+        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-10 shadow-xl max-w-xl mx-auto">
 
-        <div className="flex gap-4">
-          <a
-            href="https://github.com/itsceciliaramirez"
-            target="_blank"
-            className="bg-white text-black px-5 py-2 rounded-lg font-semibold hover:bg-gray-300"
-          >
-            GitHub
-          </a>
+          <p className="text-gray-200 text-lg mb-6">
+            Interested in working together or connecting?
+          </p>
 
           <a
-            href="https://linkedin.com/in/cecilia-ramirez-b5b16133b"
-            target="_blank"
-            className="border border-white px-5 py-2 rounded-lg hover:bg-white hover:text-black"
+            href="mailto:ramirez.ceci@outlook.com"
+            className="inline-block bg-white text-black px-8 py-3 rounded-xl font-semibold hover:bg-gray-300 transition"
           >
-            LinkedIn
+            Email Me
           </a>
+
+          <div className="flex justify-center gap-4 mt-8">
+
+            <a
+              href="https://github.com/itsceciliaramirez"
+              target="_blank"
+              className="border border-white px-5 py-2 rounded-lg hover:bg-white hover:text-black transition"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://linkedin.com/in/cecilia-ramirez-b5b16133b"
+              target="_blank"
+              className="border border-white px-5 py-2 rounded-lg hover:bg-white hover:text-black transition"
+            >
+              LinkedIn
+            </a>
+
+          </div>
         </div>
       </section>
 
