@@ -48,38 +48,6 @@ function App() {
         </div>
       </section>
 
-{/* Resume Section */}
-<section className="px-10 py-20 text-center">
-  <h2 className="text-4xl font-bold mb-8">Resume</h2>
-
-  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-10 shadow-xl max-w-3xl mx-auto">
-
-    <p className="text-gray-200 text-lg mb-8">
-      View or download my professional resume.
-    </p>
-
-    <div className="flex justify-center gap-4 flex-wrap">
-
-      <a
- href="/CeciliaRamirez_Resume.pdf"
-  target="_blank"
-  className="bg-white text-black px-8 py-3 rounded-xl font-semibold hover:bg-gray-300 transition"
->
-  View Resume
-</a>
-
-      <a
-  href="/CeciliaRamirez_Resume.pdf"
-  download
-  className="border border-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition"
->
-  Download Resume
-</a>
-
-    </div>
-
-  </div>
-</section>
 
       {/* About */}
       <section id="about" className="px-10 py-20 max-w-5xl mx-auto">
@@ -141,6 +109,40 @@ function App() {
 
         </div>
       </section>
+
+{/* Resume Section */}
+<section className="px-10 py-20 text-center">
+  <h2 className="text-4xl font-bold mb-8">Resume</h2>
+
+  <div className="bg-white/10 backdrop-blur-md rounded-2xl p-10 shadow-xl max-w-3xl mx-auto">
+
+    <p className="text-gray-200 text-lg mb-8">
+      View or download my professional resume.
+    </p>
+
+    <div className="flex justify-center gap-4 flex-wrap">
+
+      <a
+ href="/CeciliaRamirez_Resume.pdf"
+  target="_blank"
+  className="bg-white text-black px-8 py-3 rounded-xl font-semibold hover:bg-gray-300 transition"
+>
+  View Resume
+</a>
+
+      <a
+  href="/CeciliaRamirez_Resume.pdf"
+  download
+  className="border border-white px-8 py-3 rounded-xl hover:bg-white hover:text-black transition"
+>
+  Download Resume
+</a>
+
+    </div>
+
+  </div>
+</section>
+
 
       {/* Skills */}
       <section id="skills" className="px-10 py-20 max-w-5xl mx-auto text-center">
